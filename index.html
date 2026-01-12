@@ -45,6 +45,17 @@ nav a {
   font-size:14px;
 }
 
+.brand {
+  color: #0f766e; /* dein dunkles Grün */
+}
+
+.showcase-text .sub {
+  margin-top: 16px;
+  font-size: 15px;
+  color: #64748b;
+}
+
+  
 /* SHOWCASE */
 .showcase {
   display:grid;
@@ -155,7 +166,7 @@ footer a {
 <div class="container">
 
 <header>
-  <img src="logo.png" alt="Revspond logo">
+  <img src="Logo.png" alt="Revspond logo">
   <nav>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
@@ -164,9 +175,22 @@ footer a {
 
 <section class="showcase" id="showcase">
   <div class="showcase-text" id="showcaseText">
-    <h1>Professional replies in seconds</h1>
-    <p>Revspond helps businesses respond to customer reviews professionally and effortlessly.</p>
-  </div>
+  <h1>
+    Welcome to <span class="brand">Revspond</span><br>
+    Professional AI replies for modern businesses
+  </h1>
+
+  <p>
+    Revspond is an AI-powered review assistant that helps businesses
+    respond to customer feedback professionally, consistently and
+    in seconds — without losing their brand voice.
+  </p>
+
+  <p class="sub">
+    Built for teams who care about reputation.
+  </p>
+</div>
+
 
   <div class="showcase-image">
     <img src="1767996465347.jpg" class="active">
@@ -235,3 +259,4 @@ start();
 
 </body>
 </html>
+
