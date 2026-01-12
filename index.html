@@ -55,6 +55,44 @@ nav a {
   color: #64748b;
 }
 
+/* REFINED CTA */
+.cta.refined {
+  background: #fafafa;
+  border-radius: 28px;
+  padding: 64px 32px;
+}
+
+.cta.refined h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cta.refined p {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.platforms {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.platform {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.platform .icon {
+  font-size: 18px;
+}
+
   
 /* SHOWCASE */
 .showcase {
@@ -208,11 +246,25 @@ footer a {
   </div>
 </section>
 
-<section class="cta">
-  <h2>Built for businesses</_toggle</h2>
-  <p>Calm. Professional. Consistent customer communication.</p>
-  <a href="#">Available on Android</a>
+<section class="cta refined">
+  <h2>Built for your business</h2>
+  <p>
+    Revspond supports professional customer communication
+    for businesses that care about quality and consistency.
+  </p>
+
+  <div class="platforms">
+    <div class="platform">
+      <span class="icon">🤖</span>
+      <span>Available on Android</span>
+    </div>
+    <div class="platform">
+      <span class="icon"></span>
+      <span>Available on Apple</span>
+    </div>
+  </div>
 </section>
+
 
 <footer>
   © Revspond · support@revspond.com ·
@@ -259,5 +311,6 @@ start();
 
 </body>
 </html>
+
 
 
