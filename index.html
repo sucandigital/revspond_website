@@ -130,6 +130,12 @@ nav a {
   display:block;
 }
 
+.platform-icon {
+  width: 18px;
+  height: 18px;
+  color: #64748b;
+}
+
 /* CONTROLS */
 .controls {
   position:absolute;
@@ -254,15 +260,16 @@ footer a {
   </p>
 
   <div class="platforms">
-    <div class="platform">
-      <span class="icon">🤖</span>
-      <span>Available on Android</span>
-    </div>
-    <div class="platform">
-      <span class="icon"></span>
-      <span>Available on Apple</span>
-    </div>
+  <div class="platform">
+    <img src="android.svg" alt="Android" class="platform-icon">
+    <span>Available on Android</span>
   </div>
+  <div class="platform">
+    <img src="apple.svg" alt="Apple" class="platform-icon">
+    <span>Available on Apple</span>
+  </div>
+</div>
+
 </section>
 
 
@@ -311,6 +318,7 @@ start();
 
 </body>
 </html>
+
 
 
 
