@@ -6,24 +6,38 @@
   <title>Revspond – Professional AI Review Replies</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
-      background: linear-gradient(135deg, #0F766E, #0b3a3a);
-      color: white;
+    :root {
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-light: #e5e7eb;
+      --accent: #0f766e;
+      --bg-soft: #f8fafc;
     }
 
-    .wrapper {
-      max-width: 1100px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: white;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 32px 20px 80px;
+      padding: 40px 24px;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 64px;
+      margin-bottom: 80px;
     }
 
     header img {
@@ -31,89 +45,133 @@
     }
 
     nav a {
-      color: rgba(255,255,255,0.85);
+      margin-left: 32px;
       text-decoration: none;
-      margin-left: 24px;
+      color: var(--text-muted);
       font-size: 14px;
     }
 
+    /* HERO */
     .hero {
-      max-width: 640px;
-      margin-bottom: 96px;
+      text-align: center;
+      margin-bottom: 120px;
     }
 
-    h1 {
-      font-size: 44px;
-      line-height: 1.15;
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
       margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #d1fae5;
-      margin-bottom: 32px;
+      font-size: 20px;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 48px;
     }
 
-    .cta {
-      display: inline-block;
-      background: white;
-      color: #0F766E;
-      padding: 14px 26px;
-      border-radius: 12px;
+    .hero img {
+      max-width: 380px;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* SECTIONS */
+    .section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 140px;
+    }
+
+    .section:nth-child(even) {
+      direction: rtl;
+    }
+
+    .section:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .section h2 {
+      font-size: 36px;
       font-weight: 700;
-      text-decoration: none;
-    }
-
-    .card {
-      background: white;
-      color: #0f172a;
-      border-radius: 24px;
-      padding: 56px;
-    }
-
-    .card h2 {
-      margin-top: 0;
       margin-bottom: 16px;
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
+    .section p {
+      font-size: 18px;
+      color: var(--text-muted);
     }
 
-    .feature {
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 20px;
+    .section img {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--bg-soft);
+      border-radius: 32px;
+      padding: 80px 32px;
+      text-align: center;
+      margin-bottom: 120px;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 14px;
+      background: var(--text-main);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     footer {
       text-align: center;
-      margin-top: 80px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      color: var(--text-muted);
+      padding-bottom: 40px;
     }
 
     footer a {
-      color: rgba(255,255,255,0.85);
+      color: var(--text-muted);
       text-decoration: none;
       margin: 0 8px;
     }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 32px; }
-      .card { padding: 32px; }
+    @media (max-width: 900px) {
+      .section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="container">
     <header>
-      <img src="Logo.png" alt="Revspond logo" />
+      <img src="logo.png" alt="Revspond logo" />
       <nav>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -121,39 +179,73 @@
     </header>
 
     <section class="hero">
-      <h1>Professional AI replies to customer reviews. In seconds.</h1>
+      <h1>Professional replies in seconds</h1>
       <p>
-        Revspond helps businesses respond to customer feedback quickly,
-        consistently, and in the right tone.
+        Revspond helps businesses respond to customer reviews professionally,
+        consistently and without effort.
       </p>
-      <a class="cta" href="#">Available on Android</a>
+      <img src="1767996465347.jpg" alt="Revspond reply example" />
     </section>
 
-    <section class="card">
-      <h2>Why Revspond</h2>
-      <p>
-        Built for business owners who want professional communication
-        without manual effort.
-      </p>
-
-      <div class="features">
-        <div class="feature">
-          <strong>Professional replies</strong>
-          <p>Clear, polite reply suggestions.</p>
-        </div>
-        <div class="feature">
-          <strong>Multiple tones</strong>
-          <p>Professional, polite or casual.</p>
-        </div>
-        <div class="feature">
-          <strong>Language-aware</strong>
-          <p>Replies match the review language.</p>
-        </div>
-        <div class="feature">
-          <strong>No distractions</strong>
-          <p>No ads, no tracking.</p>
-        </div>
+    <section class="section">
+      <div>
+        <h2>Paste any customer review</h2>
+        <p>
+          Simply paste a review and let Revspond generate a well-written,
+          professional reply instantly.
+        </p>
       </div>
+      <img src="1767996532332.jpg" alt="Paste review" />
+    </section>
+
+    <section class="section">
+      <div>
+        <h2>Save time. Reply professionally.</h2>
+        <p>
+          Stop spending time on wording. Revspond gives you the right tone
+          in seconds.
+        </p>
+      </div>
+      <img src="1767996570506.jpg" alt="Save time" />
+    </section>
+
+    <section class="section">
+      <div>
+        <h2>No language switching required</h2>
+        <p>
+          Replies are automatically generated in your customer’s language.
+        </p>
+      </div>
+      <img src="1767996602990.jpg" alt="Languages" />
+    </section>
+
+    <section class="section">
+      <div>
+        <h2>Respond professionally — even to difficult reviews</h2>
+        <p>
+          Handle negative feedback calmly, politely and consistently.
+        </p>
+      </div>
+      <img src="1767996634346.jpg" alt="Difficult reviews" />
+    </section>
+
+    <section class="section">
+      <div>
+        <h2>Stay calm. Stay professional.</h2>
+        <p>
+          Revspond ensures your brand voice stays professional at all times.
+        </p>
+      </div>
+      <img src="1767996682161.jpg" alt="Professional replies" />
+    </section>
+
+    <section class="cta">
+      <h2>Built for businesses</h2>
+      <p>
+        Revspond is designed for teams and business owners who care about
+        professional customer communication.
+      </p>
+      <a href="#">Available on Android</a>
     </section>
 
     <footer>
@@ -164,4 +256,3 @@
   </div>
 </body>
 </html>
-
